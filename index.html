@@ -16,8 +16,14 @@
         specChar: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~"
     };
 
+    //     generatePassword1: function() 
+    // };
+
+
+
     console.log(passGen.specChar);
     console.log(passGen.upperCase.length);
+    console.log(passGen.numChar);
 
     // 1 prompt function (password length)
     // 4 confirm functions (must choose at least one)
@@ -37,6 +43,10 @@
         alert("Must choose at least one character type.")
     }
 
+    if (opt1 === true && opt2 === true && opt3 === true && opt4 === true) {
+      generatePassword1();
+            }
+
 
 
 
@@ -47,15 +57,51 @@
     console.log(length);
 
 
-            function generatePassword() {
-                var retVal = "";
-     for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
-         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
-     }
-     return retVal;
-            }
+    //         function generatePassword() {
+    //             var retVal = "";
+    //  for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
+    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
+    //  }
+    //  return retVal;
+    //         }
 
-     console.log(generatePassword());
+    //  console.log(generatePassword());
+
+    
+    function generatePassword1() {
+        var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } if (opt1 === true && opt2 === true && opt3 === true && opt4 === true) {
+      alert(retVal);
+            }
+        }
+
+        generatePassword1();
+    
+     
+     
+    //  function generatePassword2() {
+    //             var retVal = "";
+    //  for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length; i < length; ++i) {
+    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() *n));
+    //  } if (opt1 === true && opt2 === true) {
+    //   alert(retVal);
+    //         }
+    //     }
+
+    //  console.log(generatePassword2());
+
+    //  function generatePassword3() {
+    //             var retVal = "";
+    //  for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() *n)) + passGen.numChar.charAt(Math.floor(Math.random() *n));
+    //  } if (opt1 === true && opt2 === true && opt3 === true) {
+    //   alert(retVal);
+    //         }
+    //     }
+
+    //     generatePassword3(); 
 
 
 
@@ -73,6 +119,9 @@
 // }
 
 // alert(generatePassword());
+
+
+
     
     
     
