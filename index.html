@@ -27,10 +27,13 @@
         numChar: "0123456789",
         specChar: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
 
+
+//master passGen
+
         generatePassword1: function() {
             var retVal = "";
-     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
-         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
      } 
       alert(retVal);
         }
@@ -70,7 +73,7 @@
 
     if (opt1 === false && opt2 === false && opt3 === false && opt4 === false) {
         alert("Must choose at least one character type.");
-    } else if (opt1 === true && opt2 === true && opt3 === true && opt4 === true) {
+    } else if (opt1 === true) {
       passGen.generatePassword1();
     } else {
         alert("balls");
@@ -85,7 +88,7 @@
 
     
 
-    console.log(length);
+    // console.log(length);
 
 
     //         function generatePassword() {
