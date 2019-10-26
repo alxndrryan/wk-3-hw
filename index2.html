@@ -140,8 +140,17 @@ var passGen = {
       alert(retVal);
         
     },
-    //password generator with all 4 character types
+
     generatePassword15: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+    //password generator with all 4 character types
+    generatePassword16: function() {
             var retVal = "";
      for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
          retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
@@ -204,8 +213,10 @@ var passGen = {
         passGen.generatePassword13();
     } else if (opt1 === false && opt2 === true && opt3 === true && opt4 === false) {
         passGen.generatePassword14();
+    } else if (opt1 === true && opt2 === true && opt3 === true && opt4 === false) {
+        passGen.generatePassword15();  
     } else {
-        passGen.generatePassword15();
+        passGen.generatePassword16();
     }
 
 
