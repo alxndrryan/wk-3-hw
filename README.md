@@ -17,4 +17,4 @@ Potential future additions to this project:
 
 * A styled webpage with functional buttons as opposed to confirm and alert functions
 
-* Determine a WET solution to this program as opposed to needing 15 password generator functions and 15 if/else statements
+* Determine a DRY solution to this program as opposed to needing 15 password generator functions and 15 if/else statements
