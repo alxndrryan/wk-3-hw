@@ -9,58 +9,168 @@
 <body>
     <script type="text/javascript">
 
-
-//function that filters the 4 different confirm options?
-//function detects confirm options (16 options)
-//then based on those options, executes function
-
-//or add generate password functions together??
-
-//NEXT SESSION!!!
-//Try adding functions together to reduce original function length (lowercase function added with upper)
-//or do it the wordy way
-
-
-    var passGen = {
+var passGen = {
         lowerCase: "abcdefghijklmnopqrstuvwxyz",
         upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         numChar: "0123456789",
         specChar: " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
 
-
-//master passGen
-
         generatePassword1: function() {
             var retVal = "";
-     for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
-         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
+        for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
+        retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
+    }   alert(retVal);
+            
+        },
+        
+
+        generatePassword2: function() {
+            var retVal = "";
+        for (i = 0, n = passGen.upperCase.length; i < length; ++i) {
+        retVal += passGen.upperCase.charAt(Math.floor(Math.random() * n));
+    }   alert(retVal);
+            
+        },
+
+        generatePassword3: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword4: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword5: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+
+    generatePassword6: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword7: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword8: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword9: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.upperCase.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword10: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword11: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword12: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword13: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword14: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+
+    generatePassword15: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n));
+     } 
+      alert(retVal);
+        
+    },
+    //password generator with all 4 character types
+    generatePassword16: function() {
+            var retVal = "";
+     for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
+         retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
      } 
       alert(retVal);
         }
     };
 
-    //     generatePassword1: function() 
-    // };
+    
 
 
 
-    console.log(passGen.specChar);
-    console.log(passGen.upperCase.length);
-    console.log(passGen.numChar);
 
-    // 1 prompt function (password length)
-    // 4 confirm functions (must choose at least one)
-    // make object with 4 (or 5?) strings
+    
 
-    // function generatePassword1() {
-    //     var retVal = "";
-    //  for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length + passGen.specChar.length; i < length; ++i) {
-    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() * n)) + passGen.numChar.charAt(Math.floor(Math.random() * n)) + passGen.specChar.charAt(Math.floor(Math.random() * n));
-    //  } 
-    //   alert(retVal);
-    //         }
 
-    var userLength = prompt("Enter a number for your desired password length. (Must be between 8 - 128 characters)");
+
+        //Confirm which characters the user would like generated. If character length is not between 8 - 128 an alert is given.
+
+        var userLength = prompt("Enter a number for your desired password length. (Must be between 8 - 128 characters)");
         if (userLength >= 8 && userLength <= 128) {
     var length = userLength;
     var opt1 = confirm("Would you like to use lowercase characters?");
@@ -71,87 +181,70 @@
         alert("Must choose a number between 8 and 128");
     }
 
-    if (opt1 === false && opt2 === false && opt3 === false && opt4 === false) {
+        //Calls 1 of 15 password generators. If no character types are chosen an alert is given.
+
+        if (opt1 === false && opt2 === false && opt3 === false && opt4 === false) {
         alert("Must choose at least one character type.");
-    } else if (opt1 === true) {
+    } else if (opt1 === true && opt2 === false && opt3 === false && opt4 === false) {
       passGen.generatePassword1();
+    } else if (opt1 === false && opt2 === true && opt3 === false && opt4 === false) {
+      passGen.generatePassword2();
+    } else if (opt1 === true && opt2 === true && opt4 === false && opt4 === false) {
+        passGen.generatePassword3();
+    } else if (opt1 === false && opt2 === true && opt3 === true && opt4 === true) {
+      passGen.generatePassword4();
+    } else if (opt1 === true && opt2 === false && opt3 === true && opt4 === true) {
+      passGen.generatePassword5();
+    } else if (opt1 === true && opt2 === true && opt3 === false && opt4 === true) {
+        passGen.generatePassword6();
+    } else if (opt1 === true && opt2 === true && opt3 === true && opt4 === false) {
+        passGen.generatePassword7();
+    } else if (opt1 === false && opt2 === false && opt3 === true && opt4 === true) {
+        passGen.generatePassword8();
+    } else if (opt1 === false && opt2 === true && opt3 === false && opt4 === true) {
+        passGen.generatePassword9();
+    } else if (opt1 === true && opt2 === false && opt3 === true && opt4 === false) {
+        passGen.generatePassword10();
+    } else if (opt1 === false && opt2 === false && opt3 === false && opt4 === true) {
+        passGen.generatePassword11();
+    } else if (opt1 === false && opt2 === true && opt3 === true && opt4 === false) {
+        passGen.generatePassword12();
+    } else if (opt1 === true && opt2 === false && opt3 === false && opt4 === true) {
+        passGen.generatePassword13();
+    } else if (opt1 === false && opt2 === true && opt3 === true && opt4 === false) {
+        passGen.generatePassword14();
+    } else if (opt1 === true && opt2 === true && opt3 === true && opt4 === false) {
+        passGen.generatePassword15();  
     } else {
-        alert("balls");
+        passGen.generatePassword16();
     }
 
-    
 
 
+// REFERENCE CODE: If I have time or return to this project in the future, I'd refer to this code as a rough example of how to write the generated password to the website.
+//(Alongside other HTML elements & CSS properties)
 
 
-    //take options and generate password
+//     <p>This example calls a function which returns the value of PI:</p>
 
-    
+// <p id="demo"></p>
 
-    // console.log(length);
+// <script>
+// function myFunction() {
+//   return Math.PI;
+// }
+
+// document.getElementById("demo").innerHTML = myFunction();
 
 
-    //         function generatePassword() {
-    //             var retVal = "";
-    //  for (i = 0, n = passGen.lowerCase.length; i < length; ++i) {
-    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n));
-    //  }
-    //  return retVal;
-    //         }
-
-    //  console.log(generatePassword());
-
-    
-    
 
         
     
-     
-     
-    //  function generatePassword2() {
-    //             var retVal = "";
-    //  for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length; i < length; ++i) {
-    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() *n));
-    //  } if (opt1 === true && opt2 === true) {
-    //   alert(retVal);
-    //         }
-    //     }
-
-    //  console.log(generatePassword2());
-
-    //  function generatePassword3() {
-    //             var retVal = "";
-    //  for (i = 0, n = passGen.lowerCase.length + passGen.upperCase.length + passGen.numChar.length; i < length; ++i) {
-    //      retVal += passGen.lowerCase.charAt(Math.floor(Math.random() * n)) + passGen.upperCase.charAt(Math.floor(Math.random() *n)) + passGen.numChar.charAt(Math.floor(Math.random() *n));
-    //  } if (opt1 === true && opt2 === true && opt3 === true) {
-    //   alert(retVal);
-    //         }
-    //     }
-
-    //     generatePassword3(); 
 
 
 
 
 
-
-//         function generatePassword() {
-//     var length = 8,
-//         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-//         retVal = "";
-//     for (var i = 0, n = charset.length; i < length; ++i) {
-//         retVal += charset.charAt(Math.floor(Math.random() * n));
-//     }
-//     return retVal;
-// }
-
-// alert(generatePassword());
-
-
-
-    
-    
-    
     </script>
     
 </body>
